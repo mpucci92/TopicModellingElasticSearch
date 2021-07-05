@@ -18,12 +18,12 @@ Prerequisites:
  * `CONFIG.py`: This file is used to load the text file containing the ElasticSearch IP address - used when querying for news data to be used in the topic model.
  * `GenerateDataset.py`: This file is used to generate dataframe structure based on a particular ElasticSearch Query.
  * `getData.py`: This file is used to retrieve the raw news headlines data from ElasticSearch cluster - Data can be retrieved from the "news" index or the "tweets" index. 
- * `getUmapEmbeddings.py`: 
- * `hdbscanClusters.py`: 
- * `main.py`:
- * `ParameterTuningClusters.py`:
- * `SearchAPI.py`: 
- * `textPreprocessing.py`:
- * `TopicBokehPlot.py`:
+ * `getUmapEmbeddings.py`: This file is used to generate UMAP embeddings from embeddings from distilbert outputs.
+ * `hdbscanClusters.py`: This file is used to generate clusters from the UMAP embeddings - cluster function is defined in this script.
+ * `main.py`: Main script used to take in parameters and output topic clustered bokeh plot local html file. 
+ * `ParameterTuningClusters.py`: Script to tune hyperparameters for UMAP embeddings and hdbscan clusters - goal is to maximize silhouette score for clusters. 
+ * `SearchAPI.py`: Script used to perform general searches on ElasticSearch Cluster
+ * `textPreprocessing.py`: Script used to preprocess text data - news headlines before generating embeddings
+ * `TopicBokehPlot.py`: Script used that contains bokeh plot function used to generate bokeh plot with user defined parameters. 
 
 
