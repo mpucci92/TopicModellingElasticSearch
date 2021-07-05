@@ -50,4 +50,6 @@ The following will:
 5. HDBSCAN clustering will occur on 2D embbedings and Bokeh topic model plot will be made on top of the UMAP Embeddings and the HDBSCAN cluster labels. 
 
  
+# Example of Bokeh Plot Topic Modelling Clusters
+![Bokehplot](https://user-images.githubusercontent.com/42786192/124517259-88dbfb00-ddb1-11eb-8194-4b2cf3405633.png)
 
