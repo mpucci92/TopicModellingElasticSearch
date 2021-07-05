@@ -1,4 +1,4 @@
-# McGill University -  
+# McGill University - Final Project  
 Topic Modelling Project for YCNG 229 - Neural Networks & Deep Learning Course
 
 This repository is for individuals who would like to find clusters from titles that are presumed to be relatively similar to each other. The objective of this project was to cluster similar financial news headlines in order to streamline prevalent topics coming from over 280 different financial news sources. 
