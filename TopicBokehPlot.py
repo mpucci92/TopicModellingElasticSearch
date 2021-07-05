@@ -4,7 +4,7 @@ import bokeh.plotting as bpl
 from bokeh.palettes import d3
 import bokeh
 import bokeh.models as bmo
-from bokeh.io import output_file, show
+from bokeh.plotting import output_file, show
 
 
 def generateBokeh(result,titleList):
@@ -25,6 +25,7 @@ def generateBokeh(result,titleList):
     result.loc[result.labels == -1, 'color'] = grey
     result = result[result.labels != -1]
 
+    print(result.columns)
     source = bpl.ColumnDataSource(data=result)
     hover = HoverTool(tooltips=[('title', '@title'), ('topic', '@labels')])
 
