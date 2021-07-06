@@ -13,8 +13,8 @@ def transformerModel(data,path_to_model,seq_length):
     return embeddings
 
 def umapEmbeddings(neighbors,components,metric,embeddings):
-    umap_embeddings = umap.UMAP(n_neighbors=neighbors, # 15
-                                n_components=components,  # 2 cosine
+    umap_embeddings = umap.UMAP(n_neighbors=neighbors,
+                                n_components=components,  
                                 min_dist=0.0,
                                 metric=metric).fit_transform(embeddings)
     return umap_embeddings
