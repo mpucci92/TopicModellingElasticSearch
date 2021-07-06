@@ -14,14 +14,9 @@ from datetime import date
 
 from flask import Flask, render_template
 import os
-
-#import src.algo.RandomForestClassifier_McGill_v1
-#from src.algo.RandomForestClassifier_McGill_v1 import main_function
 import requests
 
-#template_dir = os.path.dirname(os.path.realpath(__file__))
-
-app = Flask(__name__) #, template_folder=template_dir)
+app = Flask(__name__)
 today = str(date.today())
 
 @app.route('/model/<index>/<keyword>/<startTime>/<endTime>') #, methods=['GET'])
@@ -77,16 +72,6 @@ def index(index,keyword,startTime,endTime):
         js_resources=INLINE.render_js(),
         css_resources=INLINE.render_css(),
     ).encode(encoding='UTF-8')
-
-# def hello():
-#     return f'Hello you should use an other route:!\nEX: get_stock_val/<ticker>\n'
-#
-#
-# @app.route('/', methods=['GET'])
-# # def get_stock_value(ticker):
-# #     prediction = main_function(str(ticker))[0]
-# #
-# #     return render_template("index.html", title=prediction)
 
 
 if __name__ == '__main__':
