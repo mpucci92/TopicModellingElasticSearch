@@ -33,6 +33,7 @@ The app is using a flask server to process the queries. When the server receive 
    * news: retrieve data from financial news articles
    * tweets: retrieve data from financial twitter handles
  * `<keyword>`:
+   * Keyword: Any keyword can be entered and this will return only news articles related to that keyword  
    * empty: 'empty' will retrieve ALL news for a given period
  * `<startTime>`:
    * Format: YYYY-MM-DDTHH:MM:SS 
