@@ -74,8 +74,3 @@ def clusterSelection(df):
     scoringFrame = scoringFrame.sort_values(by=['silscore'], ascending=True)
 
     return scoringFrame
-
-
-
-df = pd.read_csv(r"E:\test\dataES.csv")
-print(clusterSelection(df))
