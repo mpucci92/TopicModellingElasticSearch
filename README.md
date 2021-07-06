@@ -3,7 +3,6 @@ Topic Modelling Project for YCNG 229 - Neural Networks & Deep Learning Course
 
 This repository is for individuals who would like to find clusters from titles that are presumed to be relatively similar to each other. The objective of this project was to cluster similar financial news headlines in order to streamline prevalent topics coming from over 280 different financial news sources. 
 
-  * Set up a git repo on github
   * Use git repo to spawn local flask web application that clusters financial news data coming from an ElasticSearch Cluster
   * To display clusters in interactive circle Bokeh plot 
 
