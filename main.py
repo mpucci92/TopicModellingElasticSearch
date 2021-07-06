@@ -30,9 +30,6 @@ def clusterScoring(dataframe, titleX, titleY, titleLabels):
     # daviesScore = (davies_bouldin_score(X1,X2))
     silhouetteScore = silhouette_score(X1, X2, metric='euclidean')
 
-    # print(daviesScore)
-    print(silhouetteScore)
-
 def main(index,keyword,start_time,end_time):
     path_to_model = r'E:\Pretrained Models\distilbert-base-nli-stsb-mean-tokens'
     # index = 'news'
@@ -88,7 +85,7 @@ if __name__ == '__main__':
     cleanSentence = (list(set(cleanSentence)))
     data = cleanSentence
 
-    #    # Model Parameters #
+    #  Model Parameters #
     embeddings = transformerModel(data, path_to_model, 256)
     umap_embeddings = umapEmbeddings(15, 2, 'cosine',embeddings)
     cluster = topicClusters(2, 'euclidean', 'leaf',0.1, umap_embeddings)
@@ -96,5 +93,4 @@ if __name__ == '__main__':
     result = pd.DataFrame(umap_embeddings, columns=['x', 'y'])
     result['labels'] = cluster.labels_
 
-    # Uncomment to generate bokeh plot:
     generateBokeh(result, data)
