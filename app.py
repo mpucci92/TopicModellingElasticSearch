@@ -74,6 +74,18 @@ def index(index,keyword,startTime,endTime):
     ).encode(encoding='UTF-8')
 
 
+@app.route('/model/<index>/<keyword>/<startTime>/<endTime>/topics')
+def topics(index,keyword,startTime,endTime):
+    if keyword == 'empty':
+        keyword = ""
+    result = main(index,keyword,startTime,endTime)[0]
+    data = main(index,keyword,startTime,endTime)[1]
+
+    topic_df = topicDataFrame(data, result)
+
+    return topic_df.to_html(header="true", table_id="table")
+
+
 if __name__ == '__main__':
     # Used when running locally only. When deploying to Cloud Run,
     # a webserver process such as Gunicorn will serve the app.
