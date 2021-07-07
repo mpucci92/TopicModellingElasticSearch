@@ -24,6 +24,7 @@ Prerequisites:
  * `SearchAPI.py`: Script used to perform general searches on ElasticSearch Cluster
  * `textPreprocessing.py`: Script used to preprocess text data - news headlines before generating embeddings
  * `TopicBokehPlot.py`: Script used that contains bokeh plot function used to generate bokeh plot with user defined parameters. 
+ * `topicDataframe.py`: Script used to generate table of topics with top 5 keywords per topic in dataframe to html format. 
 
 # APP workflow
 The app is using a flask server to process the queries. When the server receive a query on '/model/`<index>/<keyword>/<startTime>/<endTime>'` where `<index>` is an elasticsearch index, where `<keyword>` is a keyword for specific news retrieval, where `<startTime>` is the start time period for elasticsearch news query and where `<endTime>` is the end time period for elasticsearch news query.
