@@ -43,7 +43,7 @@ The app is using a flask server to process the queries. When the server receive 
  
 The following will:
 1. Run the app.py file to load up flask web server and then input into browser corresponding URL: `http://127.0.0.1:8080/model/<index>/<keyword>/<startTime>/<endTime>'`
-2. Pass the flask parameters to elasticsearch query object. Check if a model exists for this specific ticker
+2. Pass the flask parameters to elasticsearch query object.
     - If the parameters are defined with the correct format - financial data will be retrieved from elasticsearch cluster. 
 2. The data will then be passed to textPreprocessing function and output will be a list of title. 
 3. The list of titles will then go through distilbert model and generate text embeddings. 
